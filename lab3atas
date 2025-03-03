@@ -1,0 +1,12 @@
+import math
+x = 0.3
+epsilon = 0.01
+term = math.log(x)  
+sum_P = term
+n = 1  
+while abs(term) >= epsilon:
+    term = (math.log(x) ** (n + 1)) / (2 * n + 1)
+    sum_P += term
+    n += 1
+
+print(f"P ≈ {sum_P:.4f}")
